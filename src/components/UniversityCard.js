@@ -19,27 +19,27 @@ const UniversityCard = ({ university }) => {
     4: '其他',
   };
   return (
-    <Card className="universityCard">
+    <Card className='universityCard'>
       <Row>
         <Col md={2}>
-          <Card.Img variant="top" src={university.logoUrl} />
+          <Card.Img variant='top' src={university.logoUrl} />
         </Col>
         <Col md={8}>
-          <div className="d-flex">
+          <div className='d-flex'>
             <Card.Title>{university.name}</Card.Title>
-            <Badge pill bg="light" text="dark">
+            <Badge pill bg='light' text='dark'>
               <span>{university.province}</span>
               <span>{university.city}</span>
             </Badge>
           </div>
-          <Card.Subtitle className="mb-2 text-muted">简介: </Card.Subtitle>
+          <Card.Subtitle className='mb-2 text-muted'>简介: </Card.Subtitle>
           <Card.Text>{university.desc}</Card.Text>
-          <Badge bg="info">{degree[university.degree]}</Badge>
-          <Badge bg="primary">{tiers[university.tier]}</Badge>
-          <Badge bg="success">{future[university.future]}</Badge>
+          <Badge bg='info me-2'>{degree[university.degree]}</Badge>
+          <Badge bg='primary me-2'>{tiers[university.tier]}</Badge>
+          <Badge bg='success me-2'>{future[university.future]}</Badge>
         </Col>
         <Col md={2}>
-          <Button variant="light">
+          <Button variant='light'>
             <Link to={`/university/${university.code}`}> 查招生</Link>
           </Button>
         </Col>

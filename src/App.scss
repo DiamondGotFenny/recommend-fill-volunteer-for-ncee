@@ -1,9 +1,20 @@
 @import '~bootstrap/scss/bootstrap';
 @import './components//UniversityCard.scss';
 @import './partials/Header.scss';
+@import './partials/University.scss';
 .App {
+  overflow-x: hidden;
   h1,
   h2 {
     text-align: center;
+  }
+  .row {
+    --bs-gutter-x: 0;
+  }
+  .selecter-col {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    word-break: keep-all;
   }
 }
