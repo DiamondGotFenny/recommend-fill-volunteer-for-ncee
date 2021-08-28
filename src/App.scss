@@ -1,6 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
+@import './components//UniversityCard.scss';
+@import './partials/Header.scss';
 .App {
-  h1 {
+  h1,
+  h2 {
     text-align: center;
   }
 }

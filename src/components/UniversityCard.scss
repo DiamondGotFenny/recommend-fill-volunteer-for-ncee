@@ -1,0 +1,16 @@
+.universityCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0.1rem;
+  .row {
+    width: 90%;
+    padding: 1rem 0.1rem;
+  }
+  .card-img-top {
+    width: 120px;
+    height: 120px;
+  }
+}
