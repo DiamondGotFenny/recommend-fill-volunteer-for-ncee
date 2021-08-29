@@ -1,18 +1,23 @@
 import './App.scss';
+import React, { useState } from 'react';
 import Header from './partials/Header';
 import UniversitiesList from './partials/UniversitiesList';
+import HomePage from './partials/HomePage';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import University from './partials/University';
+import { RecomContextProvide } from './context/recommondationsContext';
 function App() {
+  const [recommondationFilters, setRecommondationFilters] = useState(null);
   return (
     <div className="App">
-      <Header className="App-header" />
       <Switch>
         <Route exact path="/">
           <Redirect to="/universities" />
         </Route>
-        <Route path="/universities" component={UniversitiesList} />
-        <Route path="/university/:id" component={University} />
+        <RecomContextProvide>
+          <Route path="/universities" component={HomePage} />
+          <Route path="/university/:id" component={University} />
+        </RecomContextProvide>
       </Switch>
     </div>
   );
