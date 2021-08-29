@@ -1,7 +1,5 @@
 import './App.scss';
 import React, { useState } from 'react';
-import Header from './partials/Header';
-import UniversitiesList from './partials/UniversitiesList';
 import HomePage from './partials/HomePage';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import University from './partials/University';
