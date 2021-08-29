@@ -7,6 +7,7 @@ import { historyScores } from '../mockData/historyScores';
 import { majorHistoryScores } from './../mockData/majorHistoryScores';
 import queryString from 'query-string';
 import RecommondationFiltersContext from '../context/recommondationsContext';
+import Button from '@restart/ui/esm/Button';
 
 const University = ({ match }) => {
   const { id } = match.params;
@@ -16,7 +17,6 @@ const University = ({ match }) => {
   const { recommondationFilter_context } = useContext(
     RecommondationFiltersContext
   );
-  console.log(recommondationFilter_context, 'recommondationFilter_context');
   const initialHistoryScoresfilters = {
     targetProvince: '',
     year: '2020',
@@ -124,7 +124,10 @@ const University = ({ match }) => {
   );
   return (
     <Container className="university">
-      <h2>中山大学</h2>
+      <h2>中山大学{university?.name}</h2>
+      <Button variant="warning" onClick={() => history.goBack()}>
+        返回
+      </Button>
       <div className="historyScores">
         <header>
           <Form>
